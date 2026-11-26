@@ -11,7 +11,7 @@ IDataView dataView = mlContext.Data.LoadFromTextFile<StudyData>(
     separatorChar: ','
 );
 
-var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2, seed: 42);
+var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
 IDataView trainData = split.TrainSet;
 IDataView testData = split.TestSet;
 
